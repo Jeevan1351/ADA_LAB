@@ -5,7 +5,7 @@
 void generateArray(int arr[10], int n)
 {
 	for(int i = 0; i<n; i++)
-		arr[i] = (rand()%100);
+		arr[i] = (rand()%10000);
 }
 void print(int *arr, int n)
 {
@@ -78,12 +78,16 @@ int main()
 			case 1: printf("\nEnter the search element:	");
 					scanf("%d", &e);
 					start_l = clock();
+					for (int c = 1; c <= 32767; c++) 
+						for (int d = 1; d <= 32767; d++) { }
 					res = LinearSearch(arr, n, 0, e);
 					end_l = clock();
 					break;
 			case 2: printf("\nEnter the search element:	");
 					scanf("%d", &e);
 					start_b = clock();
+					for (int c = 1; c <= 32767; c++)
+						for (int d = 1; d <= 32767; d++) { }
 					Sort(arr, n);
 					printf("\n\nSorted array is");
 					print(arr, n);
@@ -95,7 +99,7 @@ int main()
 		if(res <0)
 			printf("\nElement not found!");
 		else printf("\nThe Element found at index %d", res);
-		printf("\nTime taken for binary search: %lf", (double)(end_b - start_b)/CLOCKS_PER_SEC);
-		printf("\nTime taken for linear search: %lf", (double)(end_l - start_l)/CLOCKS_PER_SEC);
 	}
-}
+	printf("\nTime taken for binary search: %lf", (double)(end_b - start_b)/CLOCKS_PER_SEC);
+	printf("\nTime taken for linear search: %lf", (double)(end_l - start_l)/CLOCKS_PER_SEC);
+	}
