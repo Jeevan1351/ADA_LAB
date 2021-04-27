@@ -100,6 +100,6 @@ int main()
 			printf("\nElement not found!");
 		else printf("\nThe Element found at index %d", res);
 	}
-	printf("\nTime taken for binary search: %lf", (double)(end_b - start_b)/CLOCKS_PER_SEC);
-	printf("\nTime taken for linear search: %lf", (double)(end_l - start_l)/CLOCKS_PER_SEC);
+	printf("\nTime taken for binary search: %Lf", (long double)(end_b - start_b)/CLOCKS_PER_SEC);
+	printf("\nTime taken for linear search: %Lf", (long double)(end_l - start_l)/CLOCKS_PER_SEC);
 	}
